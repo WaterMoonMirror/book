@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head >
+    <title>书籍阅读笔记</title>
+    <!-- Latest compiled and minified CSS & JS -->
+<link rel="stylesheet" media="screen" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../js/trix-master/dist/trix.css"/>
+<script src="../js/trix-master/dist/trix.js"></script>
+<meta charset="utf-8" />
+</head>
+<body>
+
+<div class="container">
+    <div class="form-group">
+        <form action="/book/save" method="post" role="form" >
+            <legend>书籍阅读笔记</legend>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="form-group">
+                        <label for="inputID" class="col-sm-1 control-label">书名:</label>
+                        <div class="col-sm-5">
+                            <input type="text" name="name" id="inputID" class="form-control" value="" title="" required="required"/>
+                        </div>
+                        <label for="inputID" class="col-sm-1 control-label">作者:</label>
+                        <div class="col-sm-5">
+                            <input type="text" name="author" id="inputID" class="form-control" value="" title="" required="required"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="form-group">
+                        <label for="inputID" class="col-sm-1 control-label">标签:</label>
+                        <div class="col-sm-5">
+                            <input type="text" name="labels" id="inputID" class="form-control" value="" title="" required="required"/>
+                        </div>
+                        <label for="inputID" class="col-sm-1 control-label">图片:</label>
+                        <div class="col-sm-5">
+                            <div class="col-sm-5">
+                                <!-- <input type="file" name="image" id="inputID" class="form-control" value="" title="" required="required"/> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <input type="hidden" id="x" name="description" />
+                    <trix-editor input="x"></trix-editor>
+                </div>
+            </div>
+
+
+            <button type="submit" class="btn btn-primary">保存</button>
+        </form>
+    </div>
+
+</div>
+</body>
+</html>
