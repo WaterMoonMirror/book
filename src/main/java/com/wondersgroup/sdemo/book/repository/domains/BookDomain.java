@@ -11,7 +11,7 @@ import javax.persistence.Table;
 import org.springframework.format.annotation.DateTimeFormat;
 @Entity
 @Table(name="tb_book")
-public class BookDomain {
+public class BookDomain extends BaseBookDoamin<ChapterDomain> {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;

@@ -15,7 +15,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 @Entity
 @Table(name="tb_chapter")
-public class ChapterDomain {
+public class ChapterDomain extends BaseBookDoamin<PartDomain> {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
